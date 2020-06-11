@@ -1,0 +1,38 @@
+[gd_resource type="VoxelmanLibrarySimple" load_steps=7 format=2]
+
+[ext_resource path="res://library/liquid_material.tres" type="Material" id=1]
+[ext_resource path="res://library/surface_material.tres" type="Material" id=2]
+
+[sub_resource type="VoxelSurfaceSimple" id=1]
+resource_name = "A"
+voxel_name = "A"
+
+[sub_resource type="VoxelSurfaceSimple" id=2]
+resource_name = "B"
+id = 1
+voxel_name = "B"
+top_atlas_x = 1
+bottom_atlas_x = 1
+side_atlas_x = 1
+
+[sub_resource type="VoxelSurfaceSimple" id=3]
+resource_name = "Ladder"
+voxel_name = "Ladder"
+top_atlas_x = 2
+bottom_atlas_x = 2
+side_atlas_x = 2
+
+[sub_resource type="VoxelSurfaceSimple" id=4]
+resource_name = "Water"
+voxel_name = "Water"
+liquid = true
+top_atlas_x = 3
+bottom_atlas_x = 3
+side_atlas_x = 3
+
+[resource]
+materials = [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ), ExtResource( 2 ) ]
+liquid_materials = [ ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ), ExtResource( 1 ) ]
+atlas_columns = 4
+atlas_rows = 4
+voxel_surfaces = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ]

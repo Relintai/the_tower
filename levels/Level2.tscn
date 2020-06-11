@@ -1,0 +1,267 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://levels/Level1.gd" type="Script" id=1]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://library/MainLibrary.tres" type="VoxelmanLibrarySimple" id=3]
+[ext_resource path="res://scripts/Ladder.gd" type="Script" id=4]
+[ext_resource path="res://environments/red_env.tres" type="Environment" id=5]
+[ext_resource path="res://gi_probes/level1.tres" type="GIProbeData" id=6]
+[ext_resource path="res://areas/ExitPortal.tscn" type="PackedScene" id=7]
+
+[sub_resource type="VoxelChunkBlocky" id=1]
+resource_name = "Chunk[-2,1,0]"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 16, 0 )
+position_x = -2
+position_y = 1
+size_x = 16
+size_y = 16
+size_z = 16
+data_size_x = 18
+data_size_y = 18
+data_size_z = 18
+margin_start = 1
+margin_end = 1
+library = ExtResource( 3 )
+channel_count = 1
+data_channel = PoolByteArray( 31, 0, 1, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 230, 31, 1, 241, 9, 255, 70, 15, 89, 1, 255, 47, 15, 65, 1, 255, 47, 15, 2, 0, 255, 255, 255, 138, 12, 219, 4, 28, 1, 17, 0, 29, 0, 17, 0, 15, 18, 0, 18, 15, 2, 0, 233, 44, 1, 1, 70, 1, 12, 16, 0, 14, 120, 1, 15, 18, 0, 1, 15, 2, 0, 255, 32, 14, 172, 2, 15, 2, 0, 255, 13, 15, 49, 1, 255, 14, 14, 32, 1, 14, 18, 0, 15, 2, 0, 7, 80, 0, 0, 0, 0, 0 )
+
+[sub_resource type="VoxelChunkBlocky" id=2]
+resource_name = "Chunk[-2,1,1]"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 16, 16 )
+position_x = -2
+position_y = 1
+position_z = 1
+size_x = 16
+size_y = 16
+size_z = 16
+data_size_x = 18
+data_size_y = 18
+data_size_z = 18
+margin_start = 1
+margin_end = 1
+library = ExtResource( 3 )
+channel_count = 1
+data_channel = PoolByteArray( 31, 0, 1, 0, 255, 18, 31, 1, 37, 1, 255, 13, 14, 32, 1, 14, 18, 0, 15, 2, 0, 255, 14, 15, 50, 1, 17, 14, 36, 0, 14, 18, 0, 15, 2, 0, 251, 14, 32, 1, 15, 18, 0, 17, 15, 2, 0, 255, 255, 255, 255, 240, 14, 35, 5, 15, 2, 0, 255, 14, 14, 50, 1, 14, 18, 0, 15, 2, 0, 255, 255, 101, 15, 136, 2, 255, 50, 15, 68, 1, 255, 50, 15, 2, 0, 255, 255, 255, 255, 255, 255, 78, 80, 0, 0, 0, 0, 0 )
+
+[sub_resource type="VoxelChunkBlocky" id=3]
+resource_name = "Chunk[-1,1,1]"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 16, 16 )
+position_x = -1
+position_y = 1
+position_z = 1
+size_x = 16
+size_y = 16
+size_z = 16
+data_size_x = 18
+data_size_y = 18
+data_size_z = 18
+margin_start = 1
+margin_end = 1
+library = ExtResource( 3 )
+channel_count = 1
+data_channel = PoolByteArray( 31, 0, 1, 0, 21, 31, 1, 41, 0, 21, 11, 2, 0, 27, 2, 16, 0, 15, 73, 0, 38, 15, 2, 0, 15, 14, 90, 0, 15, 18, 0, 17, 15, 2, 0, 88, 14, 143, 0, 15, 2, 0, 19, 14, 56, 0, 14, 18, 0, 13, 2, 0, 14, 35, 0, 15, 18, 0, 89, 15, 2, 0, 34, 15, 161, 0, 17, 15, 2, 0, 90, 15, 145, 0, 17, 15, 36, 0, 71, 15, 2, 0, 8, 14, 117, 0, 4, 2, 0, 14, 26, 0, 14, 18, 0, 15, 2, 0, 90, 14, 127, 0, 15, 18, 0, 35, 15, 2, 0, 62, 14, 135, 0, 15, 2, 0, 134, 15, 171, 0, 17, 15, 36, 0, 53, 15, 2, 0, 26, 31, 1, 118, 0, 17, 15, 2, 0, 79, 14, 134, 0, 14, 153, 0, 15, 36, 0, 0, 13, 153, 0, 15, 36, 0, 35, 15, 2, 0, 26, 15, 99, 0, 0, 13, 19, 0, 13, 17, 0, 15, 2, 0, 63, 15, 99, 0, 17, 14, 36, 0, 14, 18, 0, 14, 2, 0, 14, 36, 0, 44, 1, 1, 5, 8, 14, 36, 0, 15, 2, 0, 26, 15, 221, 1, 0, 15, 82, 0, 25, 15, 44, 0, 25, 15, 2, 0, 9, 14, 72, 0, 14, 18, 0, 15, 2, 0, 36, 13, 73, 0, 15, 243, 0, 44, 14, 2, 0, 15, 81, 0, 26, 13, 143, 0, 15, 60, 3, 0, 15, 2, 0, 17, 15, 72, 0, 17, 15, 36, 0, 16, 14, 35, 0, 15, 2, 0, 0, 14, 37, 0, 15, 243, 0, 17, 14, 54, 0, 6, 2, 0, 14, 28, 0, 15, 18, 0, 35, 15, 2, 0, 7, 15, 80, 0, 35, 15, 54, 0, 34, 14, 13, 1, 15, 2, 0, 18, 14, 55, 0, 14, 18, 0, 15, 2, 0, 9, 15, 172, 0, 34, 28, 0, 64, 4, 6, 2, 0, 15, 80, 0, 17, 15, 2, 0, 2, 11, 57, 0, 11, 15, 0, 15, 226, 2, 38, 14, 2, 0, 15, 90, 0, 0, 13, 19, 0, 15, 68, 1, 125, 15, 2, 0, 0, 13, 180, 0, 14, 3, 4, 14, 198, 0, 15, 53, 0, 16, 15, 2, 0, 37, 15, 91, 0, 44, 15, 63, 0, 17, 15, 36, 0, 17, 15, 2, 0, 26, 22, 1, 1, 0, 3, 56, 0, 5, 9, 0, 4, 2, 0, 31, 1, 18, 0, 0, 4, 28, 0, 4, 2, 0, 14, 18, 0, 15, 2, 0, 36, 15, 225, 0, 44, 14, 63, 0, 15, 2, 0, 63, 14, 50, 1, 36, 0, 3, 1, 0, 4, 110, 0, 12, 136, 0, 29, 1, 155, 2, 14, 50, 1, 14, 36, 0, 15, 2, 0, 36, 12, 125, 0, 15, 18, 0, 1, 15, 2, 0, 8, 14, 63, 0, 15, 2, 0, 64, 1, 255, 0, 7, 90, 2, 22, 1, 87, 1, 3, 110, 0, 5, 9, 0, 4, 2, 0, 7, 46, 0, 3, 2, 0, 15, 18, 0, 18, 3, 44, 0, 15, 2, 0, 28, 15, 5, 1, 82, 15, 2, 0, 48, 11, 168, 0, 4, 69, 1, 4, 90, 0, 2, 16, 0, 4, 14, 0, 0, 47, 0, 1, 18, 0, 0, 11, 0, 3, 2, 0, 12, 16, 0, 0, 70, 5, 9, 33, 0, 15, 2, 0, 39, 11, 156, 0, 15, 2, 0, 131, 14, 165, 0, 14, 18, 0, 15, 2, 0, 13, 14, 48, 1, 15, 68, 0, 31, 15, 2, 0, 255, 187, 80, 0, 0, 0, 0, 0 )
+
+[sub_resource type="VoxelChunkBlocky" id=4]
+resource_name = "Chunk[-1,1,0]"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 16, 0 )
+position_x = -1
+position_y = 1
+size_x = 16
+size_y = 16
+size_z = 16
+data_size_x = 18
+data_size_y = 18
+data_size_z = 18
+margin_start = 1
+margin_end = 1
+library = ExtResource( 3 )
+channel_count = 1
+data_channel = PoolByteArray( 31, 0, 1, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 32, 31, 1, 42, 10, 255, 46, 15, 65, 1, 255, 47, 15, 2, 0, 164, 15, 248, 1, 251, 15, 14, 1, 35, 14, 54, 0, 14, 18, 0, 15, 2, 0, 180, 15, 217, 0, 16, 15, 35, 0, 16, 15, 36, 0, 18, 15, 2, 0, 106, 14, 161, 0, 14, 18, 0, 15, 2, 0, 18, 29, 1, 56, 0, 13, 17, 0, 15, 36, 0, 17, 15, 35, 0, 0, 47, 1, 2, 129, 0, 18, 11, 2, 0, 14, 126, 0, 15, 2, 0, 70, 14, 107, 0, 15, 18, 0, 0, 13, 19, 0, 15, 234, 0, 0, 13, 233, 0, 13, 53, 0, 15, 72, 0, 19, 13, 55, 0, 13, 17, 0, 61, 0, 1, 0, 109, 0, 15, 2, 0, 124, 14, 180, 0, 15, 2, 0, 72, 13, 100, 2, 15, 158, 1, 0, 15, 127, 0, 35, 15, 199, 0, 87, 15, 106, 0, 17, 15, 36, 0, 17, 15, 2, 0, 1, 13, 45, 2, 15, 73, 0, 37, 15, 2, 0, 15, 14, 90, 0, 15, 18, 0, 17, 15, 2, 0, 88, 14, 143, 0, 15, 2, 0, 19, 14, 56, 0, 14, 18, 0, 13, 2, 0, 14, 35, 0, 15, 18, 0, 89, 15, 2, 0, 24, 80, 0, 0, 0, 0, 0 )
+
+[sub_resource type="VoxelChunkBlocky" id=5]
+resource_name = "Chunk[-1,2,1]"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 32, 16 )
+position_x = -1
+position_y = 2
+position_z = 1
+size_x = 16
+size_y = 16
+size_z = 16
+data_size_x = 18
+data_size_y = 18
+data_size_z = 18
+margin_start = 1
+margin_end = 1
+library = ExtResource( 3 )
+channel_count = 1
+data_channel = PoolByteArray( 31, 0, 1, 0, 255, 255, 255, 255, 255, 255, 34, 31, 1, 48, 6, 255, 49, 15, 68, 1, 255, 32, 14, 50, 1, 14, 18, 0, 15, 2, 0, 255, 14, 14, 50, 1, 14, 18, 0, 15, 2, 0, 251, 14, 32, 1, 15, 18, 0, 17, 15, 2, 0, 251, 15, 50, 1, 17, 14, 36, 0, 15, 2, 0, 251, 14, 32, 1, 15, 18, 0, 17, 15, 2, 0, 251, 15, 50, 1, 17, 14, 36, 0, 15, 2, 0, 53, 31, 1, 91, 0, 71, 15, 2, 0, 88, 15, 197, 0, 89, 14, 50, 1, 47, 3, 3, 235, 0, 88, 15, 2, 0, 70, 15, 68, 1, 90, 13, 198, 0, 14, 86, 1, 15, 2, 0, 255, 32, 15, 68, 1, 255, 50, 15, 2, 0, 255, 255, 60, 80, 0, 0, 0, 0, 0 )
+
+[sub_resource type="VoxelChunkBlocky" id=6]
+resource_name = "Chunk[0,1,0]"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0 )
+position_y = 1
+size_x = 16
+size_y = 16
+size_z = 16
+data_size_x = 18
+data_size_y = 18
+data_size_z = 18
+margin_start = 1
+margin_end = 1
+library = ExtResource( 3 )
+channel_count = 1
+data_channel = PoolByteArray( 31, 0, 1, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 197, 80, 0, 0, 0, 0, 0 )
+
+[sub_resource type="VoxelChunkBlocky" id=7]
+resource_name = "Chunk[0,1,1]"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 16 )
+position_y = 1
+position_z = 1
+size_x = 16
+size_y = 16
+size_z = 16
+data_size_x = 18
+data_size_y = 18
+data_size_z = 18
+margin_start = 1
+margin_end = 1
+library = ExtResource( 3 )
+channel_count = 1
+data_channel = PoolByteArray( 31, 0, 1, 0, 255, 255, 133, 31, 1, 151, 2, 255, 49, 15, 68, 1, 255, 51, 15, 69, 1, 255, 49, 14, 68, 1, 13, 17, 0, 15, 2, 0, 255, 15, 14, 68, 1, 15, 2, 0, 255, 32, 15, 68, 1, 255, 50, 15, 187, 3, 0, 15, 18, 0, 35, 15, 2, 0, 233, 14, 50, 1, 29, 2, 15, 1, 14, 18, 0, 14, 54, 0, 15, 2, 0, 233, 14, 14, 1, 14, 50, 1, 14, 18, 0, 14, 54, 0, 15, 2, 0, 233, 14, 14, 1, 15, 18, 0, 35, 15, 2, 0, 255, 255, 255, 255, 255, 255, 255, 255, 116, 80, 0, 0, 0, 0, 0 )
+
+[sub_resource type="VoxelChunkBlocky" id=8]
+resource_name = "Chunk[-1,1,2]"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 16, 32 )
+position_x = -1
+position_y = 1
+position_z = 2
+size_x = 16
+size_y = 16
+size_z = 16
+data_size_x = 18
+data_size_y = 18
+data_size_z = 18
+margin_start = 1
+margin_end = 1
+library = ExtResource( 3 )
+channel_count = 1
+data_channel = PoolByteArray( 31, 0, 1, 0, 26, 29, 1, 46, 0, 14, 18, 0, 15, 2, 0, 13, 29, 1, 51, 0, 13, 17, 0, 15, 2, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 49, 80, 0, 0, 0, 0, 0 )
+
+[sub_resource type="VoxelChunkBlocky" id=9]
+resource_name = "Chunk[-2,2,1]"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 32, 16 )
+position_x = -2
+position_y = 2
+position_z = 1
+size_x = 16
+size_y = 16
+size_z = 16
+data_size_x = 18
+data_size_y = 18
+data_size_z = 18
+margin_start = 1
+margin_end = 1
+library = ExtResource( 3 )
+channel_count = 1
+data_channel = PoolByteArray( 31, 0, 1, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 197, 80, 0, 0, 0, 0, 0 )
+
+[sub_resource type="VoxelChunkBlocky" id=10]
+resource_name = "Chunk[0,2,1]"
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32, 16 )
+position_y = 2
+position_z = 1
+size_x = 16
+size_y = 16
+size_z = 16
+data_size_x = 18
+data_size_y = 18
+data_size_z = 18
+margin_start = 1
+margin_end = 1
+library = ExtResource( 3 )
+channel_count = 1
+data_channel = PoolByteArray( 31, 0, 1, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 40, 29, 1, 50, 10, 15, 18, 0, 17, 15, 2, 0, 251, 29, 2, 15, 1, 14, 18, 0, 14, 86, 1, 15, 2, 0, 251, 14, 50, 1, 14, 18, 0, 15, 68, 1, 255, 14, 14, 32, 1, 15, 18, 0, 17, 15, 2, 0, 255, 255, 255, 255, 255, 255, 255, 255, 132, 80, 0, 0, 0, 0, 0 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 0.470313, 4.46225, 0.754098 )
+
+[node name="Level2" type="VoxelWorldBlocky"]
+editable = true
+library = ExtResource( 3 )
+chunks = [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.238161, 0.971226, 0, -0.971226, 0.238161, 0, 14.9531, 0 )
+light_color = Color( 0.298039, 0.627451, 0.784314, 1 )
+light_energy = 0.19
+shadow_enabled = true
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.498533, 0.866871, 0, -0.866871, -0.498533, 0, 14.9531, -0.0236439 )
+light_color = Color( 0.894118, 0.901961, 0.905882, 1 )
+light_energy = 0.19
+shadow_enabled = true
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3737, 22.2862, 17.3319 )
+light_color = Color( 0.545098, 0.803922, 0.403922, 1 )
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.12439, 25.2891, 17.5787 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 5 )
+
+[node name="GIProbe" type="GIProbe" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.24192, 27.1703, 21.894 )
+extents = Vector3( 13.3083, 8.74279, 16.0324 )
+energy = 3.33
+propagation = 0.41
+bias = 1.772
+normal_bias = 0.816
+interior = true
+compress = true
+data = ExtResource( 6 )
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.96332, 24.167, 17.7326 )
+light_color = Color( 0.627451, 0.0862745, 0.776471, 1 )
+light_energy = 1.65
+shadow_enabled = true
+
+[node name="OmniLight4" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3812, 25.2187, 20.8924 )
+light_energy = 0.96
+light_indirect_energy = 5.3
+light_negative = true
+light_specular = 0.98
+shadow_enabled = true
+omni_range = 12.7
+omni_attenuation = 2.82842
+
+[node name="OmniLight3" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.639428, 24.7962, 15.2102 )
+light_color = Color( 0.517647, 0.623529, 0.180392, 1 )
+shadow_enabled = true
+
+[node name="OmniLight5" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1076, 29.5305, 27.24 )
+light_color = Color( 0.815686, 0.831373, 0.764706, 1 )
+shadow_enabled = true
+omni_range = 8.8008
+
+[node name="ExitPortal" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95379, 32.0067, 25.0291 )
+
+[node name="Ladder" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.039, 25.5516, 28.331 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ladder"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.519846, 2.90384, 0.339609 )
+shape = SubResource( 11 )

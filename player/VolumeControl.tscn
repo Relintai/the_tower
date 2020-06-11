@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://player/Volume.gd" type="Script" id=1]
+
+[node name="VolumeControl" type="HBoxContainer"]
+margin_top = 33.0
+margin_right = 153.0
+margin_bottom = 49.0
+
+[node name="Label" type="Label" parent="."]
+margin_top = 1.0
+margin_right = 49.0
+margin_bottom = 15.0
+text = "Volume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Volume" type="HSlider" parent="."]
+margin_left = 53.0
+margin_right = 153.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 100, 0 )
+min_value = -80.0
+max_value = 0.0
+script = ExtResource( 1 )

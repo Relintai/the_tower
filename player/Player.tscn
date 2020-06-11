@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://player/Player.gd" type="Script" id=1]
+[ext_resource path="res://sounds/edited/stepdirt_1.wav" type="AudioStream" id=2]
+[ext_resource path="res://player/VolumeControl.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/Menu.gd" type="Script" id=4]
+[ext_resource path="res://player/Exit.gd" type="Script" id=5]
+[ext_resource path="res://player/ui_theme.tres" type="Theme" id=6]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.5
+height = 1.6
+
+[node name="Player" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="Capsule" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.30561, 0 )
+shape = SubResource( 1 )
+
+[node name="Head" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25899, 0 )
+
+[node name="Camera" type="Camera" parent="Head"]
+current = true
+
+[node name="Contact" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.209, 0 )
+enabled = true
+cast_to = Vector3( 0, -0.4, 0 )
+
+[node name="foot" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 2 )
+bus = "Footsteps"
+
+[node name="Menu" type="CenterContainer" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 6 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main" type="PanelContainer" parent="Menu"]
+margin_left = 508.0
+margin_top = 296.0
+margin_right = 515.401
+margin_bottom = 303.085
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/Main"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 160.0
+margin_bottom = 89.0
+custom_constants/separation = 13
+
+[node name="Resume" type="Button" parent="Menu/Main/VBoxContainer"]
+margin_right = 153.0
+margin_bottom = 20.0
+text = "Resume"
+
+[node name="VolumeControl" parent="Menu/Main/VBoxContainer" instance=ExtResource( 3 )]
+
+[node name="Exit" type="Button" parent="Menu/Main/VBoxContainer"]
+margin_top = 62.0
+margin_right = 153.0
+margin_bottom = 82.0
+text = "Exit"
+script = ExtResource( 5 )

@@ -1,0 +1,12 @@
+[gd_resource type="GIProbeData" format=2]
+
+[resource]
+bounds = AABB( -16.5585, -7.39551, -12.7828, 33.117, 14.791, 25.5656 )
+cell_size = 0.258727
+to_cell_xform = Transform( 3.86508, 0, 0, 0, 3.86508, 0, 0, 0, 3.86508, 64, 28.5843, 49.4066 )
+dynamic_data = PoolIntArray( 0, 8, 128, 64, 128, 1, 0, 0, 0, 0, 0, 65536, 0, 0, 87420128, 0, -1, -1, -1, -1, -1, -1, -1, -1, 0, 0, 8355711, 0 )
+dynamic_range = 8
+bias = 1.5
+normal_bias = 0.0
+propagation = 0.7
+interior = true

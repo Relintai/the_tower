@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/exit_portal.gd" type="Script" id=1]
+[ext_resource path="res://particles/flake.png" type="Texture" id=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 0.5, 1, 0.5 )
+gravity = Vector3( 0, 9.8, 0 )
+scale = 0.1
+color = Color( 0.258824, 0.329412, 0.835294, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+vertex_color_use_as_albedo = true
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="QuadMesh" id=3]
+material = SubResource( 2 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1, 1.65801, 1 )
+
+[node name="ExitPortal" type="Area"]
+script = ExtResource( 1 )
+
+[node name="Particles" type="Particles" parent="."]
+amount = 13
+lifetime = 0.63
+process_material = SubResource( 1 )
+draw_pass_1 = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67644, 0 )
+shape = SubResource( 4 )

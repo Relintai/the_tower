@@ -1,0 +1,13 @@
+[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://library/main_atlas.png" type="Texture" id=1]
+[ext_resource path="res://library/main_emission.png" type="Texture" id=2]
+
+[resource]
+albedo_texture = ExtResource( 1 )
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 2.92
+emission_operator = 0
+emission_on_uv2 = false
+emission_texture = ExtResource( 2 )

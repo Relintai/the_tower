@@ -1,0 +1,133 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://areas/ExitPortal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://environments/red_env.tres" type="Environment" id=3]
+[ext_resource path="res://library/MainLibrary.tres" type="VoxelmanLibrarySimple" id=4]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://particles/flake.png" type="Texture" id=6]
+
+[sub_resource type="Gradient" id=1]
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 70, 70, 70 )
+gravity = Vector3( 0, -0.4, 0 )
+initial_velocity_random = 0.15
+angular_velocity = 16.55
+angular_velocity_random = 0.51
+radial_accel = -0.05
+radial_accel_random = 0.37
+scale = 0.4
+color_ramp = SubResource( 2 )
+hue_variation = 0.48
+hue_variation_random = 0.09
+anim_speed = 44.14
+anim_offset = 0.07
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_transparent = true
+vertex_color_use_as_albedo = true
+params_specular_mode = 4
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_texture = ExtResource( 6 )
+
+[sub_resource type="QuadMesh" id=5]
+material = SubResource( 4 )
+
+[node name="LevelKit" type="VoxelWorldBlocky"]
+editable = true
+max_concurrent_generations = 5
+library = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.852744, 0.165382, 0 )
+
+[node name="GIProbe" type="GIProbe" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.53486, 2.91956, -10.1021 )
+extents = Vector3( 16.5585, 7.39551, 12.7828 )
+dynamic_range = 8
+interior = true
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.969817, 0.22762, -0.0874344, 0, 0.35858, 0.933499, 0.243835, -0.905323, 0.347757, 0, 5.5679, -6.05193 )
+light_color = Color( 0.47451, 0.352941, 0.607843, 1 )
+light_energy = 0.31
+shadow_enabled = true
+
+[node name="DirectionalLight2" type="DirectionalLight" parent="."]
+transform = Transform( 0.902848, -0.382056, -0.197228, 0, -0.458712, 0.888585, -0.42996, -0.802257, -0.414147, 0, 5.5679, -6.94149 )
+light_color = Color( 0.682353, 0.145098, 0.145098, 1 )
+light_energy = 0.17
+shadow_enabled = true
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33566, 8.78919, -13.4252 )
+light_color = Color( 0.894118, 0.894118, 0.894118, 1 )
+light_energy = 1.17
+light_negative = true
+shadow_enabled = true
+omni_range = 7.3664
+omni_attenuation = 2.0
+omni_shadow_mode = 0
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18059, 1.65957, -15.6395 )
+light_color = Color( 0.141176, 0.427451, 0.552941, 1 )
+light_energy = 2.55
+light_indirect_energy = 5.47
+light_specular = 0.61
+omni_range = 8.88538
+omni_attenuation = 1.1487
+
+[node name="OmniLight3" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2802, 1.65957, -7.3639 )
+light_color = Color( 0.462745, 0.0980392, 0.380392, 1 )
+light_energy = 2.55
+light_indirect_energy = 5.47
+light_specular = 0.61
+omni_range = 8.88538
+omni_attenuation = 1.1487
+
+[node name="OmniLight4" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.53726, 4.41136, -7.73945 )
+light_color = Color( 0.164706, 0.054902, 0.690196, 1 )
+light_energy = 2.55
+light_indirect_energy = 5.47
+light_specular = 0.61
+omni_range = 8.88538
+omni_attenuation = 0.406128
+
+[node name="OmniLight5" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.674599, 2.49094, 1.27345 )
+light_color = Color( 0.372549, 0.572549, 0.705882, 1 )
+light_energy = 0.83
+light_indirect_energy = 5.47
+light_negative = true
+light_specular = 0.61
+omni_range = 7.6254
+omni_attenuation = 0.70711
+
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1743, 5.65334, -9.91923 )
+amount = 50
+lifetime = 8.41
+speed_scale = 4.44
+randomness = 0.38
+visibility_aabb = AABB( -61.9632, -36.4177, -64.4469, 123.926, 72.8355, 128.894 )
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 5 )
+
+[node name="ExitPortal" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9693, 3.02528, -9.99266 )

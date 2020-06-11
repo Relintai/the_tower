@@ -1,0 +1,18 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/Main.gd" type="Script" id=1]
+[ext_resource path="res://levels/Level2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/Level1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/Level0.tscn" type="PackedScene" id=4]
+[ext_resource path="res://levels/Level3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://levels/Level4.tscn" type="PackedScene" id=6]
+[ext_resource path="res://levels/Level5.tscn" type="PackedScene" id=7]
+[ext_resource path="res://levels/Level6.tscn" type="PackedScene" id=8]
+[ext_resource path="res://levels/Level7.tscn" type="PackedScene" id=9]
+[ext_resource path="res://levels/Level9.tscn" type="PackedScene" id=10]
+[ext_resource path="res://levels/Level8.tscn" type="PackedScene" id=11]
+[ext_resource path="res://levels/Level10.tscn" type="PackedScene" id=12]
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+levels = [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 12 ) ]
