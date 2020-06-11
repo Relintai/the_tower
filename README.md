@@ -6,11 +6,11 @@ PC only, needs GLES3. (I think it should run on GLES2 though, but never tried it
 
 ## Controls
 
-w,a,s,d: Movement \
-space: jump (you can also double jump) \
-shift: run \
-r: reload level \
-esc: ingame menu
+`w`,`a`,`s`,`d`: Movement \
+`space`: jump (you can also double jump) \
+`shift`: run \
+`r`: reload level \
+`esc`: ingame menu
 
 ## Assets
 
