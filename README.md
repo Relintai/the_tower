@@ -6,6 +6,11 @@ PC only, needs GLES3. (I think it should run on GLES2 though, but never tried it
 
 In order to open this, you need to have a Godot built with https://github.com/Relintai/voxelman !
 
+# Pre-built binaries
+
+You can grab a pre-built editor binary from the [Broken Seals](https://github.com/Relintai/broken_seals/releases) 
+repo, should you want to. It contains all my modules.
+
 ## Controls
 
 `w`,`a`,`s`,`d`: Movement \
