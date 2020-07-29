@@ -2,8 +2,6 @@
 
 A really simple (and visually strange) demonstration project for Voxelman.
 
-PC only, needs GLES3. (I think it should run on GLES2 though, but never tried it.)
-
 In order to open this, you need to have a Godot built with https://github.com/Relintai/voxelman !
 
 # Pre-built binaries
