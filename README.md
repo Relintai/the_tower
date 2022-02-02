@@ -2,12 +2,16 @@
 
 A really simple (and visually strange) demonstration project for Voxelman.
 
-In order to open this, you need to have a Godot built with https://github.com/Relintai/voxelman !
+In order to open this, you need to have a Godot built with [voxelman](https://github.com/Relintai/voxelman)!
+
+Currently this will only work with [this revision](https://github.com/Relintai/voxelman/commit/52356411223144721fb1c68ccf1955c33bfec44b)
+of voxelman. I'm hoping to update it soon to voxelman master.
 
 # Pre-built binaries
 
-You can grab a pre-built editor binary from the [Broken Seals](https://github.com/Relintai/broken_seals/releases) 
-repo, should you want to. It contains all my modules.
+You can grab a pre-built editor binary from the releases tab [[here]](https://github.com/Relintai/the_tower/releases).
+
+This project is also loadable with older binaries from the [Broken Seals](https://github.com/Relintai/broken_seals) repo.
 
 ## Controls
 
