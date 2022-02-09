@@ -279,7 +279,7 @@ First pull the changes by calling
 
 ``` git pull orgin master ```
 
-Then just run `scons`, to will update the modules.
+Then just run `scons`, to update the modules.
 
 ## Upgrading the modules
 
