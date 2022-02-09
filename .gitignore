@@ -1,16 +1,34 @@
 \exports/
 \.import/
 
-addons/scene_notes/
+engine
+modules/*
+logs/*
 
-addons/todo/
+*.d
+*.o
+*.meta
+game/.import/**
+game/.prop_tool_temp/**
+.sconsign.dblite
+.DS_Store
 
-scene-notes\.ini
+export/**
+release/**
 
-todo\.cache\.ini
+.vs/*
+.kdev4/*
+.vscode/*
 
-todo\.config\.ini
+TestRWTextures
 
-export_presets\.cfg
+_build/*
+_binaries/*
+game/android/build/*
 
-export.cfg
+*.blend1
+.dir-locals.el
+
+build.config
+
+__pycache__/*
