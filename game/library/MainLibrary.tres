@@ -1,4 +1,4 @@
-[gd_resource type="VoxelmanLibrarySimple" load_steps=7 format=2]
+[gd_resource type="VoxelLibrarySimple" load_steps=7 format=2]
 
 [ext_resource path="res://library/liquid_material.tres" type="Material" id=1]
 [ext_resource path="res://library/surface_material.tres" type="Material" id=2]
