@@ -15,6 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The Tower"
+config/description="A really simple (and visually strange) demonstration project for Voxelman."
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
 
