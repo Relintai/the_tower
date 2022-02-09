@@ -80,7 +80,7 @@ If you don't want some of these in your build, then you can remove them by editi
 
 ## Compiling
 
-First make sure, that you have everything installed to be able to compile the godot engine. See: [The official docs for compiling Godot](https://docs.godotengine.org/en/latest/development/compiling/index.html) for more info. My setup/compile script uses the same tools, so
+First make sure, that you have everything installed to be able to compile the godot engine. See [the official docs for compiling Godot](https://docs.godotengine.org/en/latest/development/compiling/index.html) for more info. My setup/compile script uses the same tools, so
 you don't need to install anything else.
 
 Now let's clone this repository:
