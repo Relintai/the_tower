@@ -9,7 +9,7 @@ In order to open this, you need to have a Godot built with [voxelman](https://gi
 You can either just get an executable at the [releases tab](https://github.com/Relintai/the_tower/releases), or 
 you can build one yourself see [here](#compiling).
 
-Uses GLES3, and is loaded with effects. (It will likely make low powered devices (like phones) cry.)
+Uses GLES3, and is loaded with effects. It will likely make low powered devices (like phones) cry.
 
 Should work on all platforms (even when there is no threading available).\
 It does not have touchscreen controls tough.
