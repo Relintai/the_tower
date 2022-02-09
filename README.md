@@ -2,6 +2,8 @@
 
 A really simple (and visually strange) demonstration project for Voxelman.
 
+It is a first person parkour game. Reach the weird glowing teleporter at the end of each level.
+
 In order to open this, you need to have a Godot built with [voxelman](https://github.com/Relintai/voxelman) added!
 
 You can either just get an executable at the [releases tab](https://github.com/Relintai/the_tower/releases), or 
@@ -14,6 +16,13 @@ you can build one yourself see [here](#compiling).
 `shift`: run \
 `r`: reload level \
 `esc`: ingame menu
+
+## Screenshots
+
+![The menu](pictures/screenshot_menu.jpg)
+![The game](pictures/screenshot_game.jpg)
+![A teleporter](pictures/screenshot_teleporter.jpg)
+![The editor](pictures/screenshot_editor.jpg)
 
 ## Assets
 
