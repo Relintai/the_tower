@@ -3,7 +3,7 @@
 [ext_resource path="res://levels/title_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://areas/ExitPortal.tscn" type="PackedScene" id=2]
 [ext_resource path="res://environments/red_env.tres" type="Environment" id=3]
-[ext_resource path="res://library/MainLibrary.tres" type="VoxelmanLibrarySimple" id=4]
+[ext_resource path="res://library/MainLibrary.tres" type="VoxelLibrarySimple" id=4]
 [ext_resource path="res://levels/Level10.gd" type="Script" id=5]
 [ext_resource path="res://particles/flake.png" type="Texture" id=6]
 
